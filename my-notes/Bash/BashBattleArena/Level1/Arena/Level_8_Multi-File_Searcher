@@ -1,0 +1,14 @@
+#!/bin/bash
+
+read -p " Enter phrase " Searchkey
+
+DIRECTORY="Arena"
+SEARCH_TERM="Error"
+
+if [ ! -d $DIRECTORY ]; then 
+echo "Directory doesn't exist"
+exit 1
+fi
+
+grep -l "$SEARCH_TERM" "$DIRECTORY"/*.log 
+

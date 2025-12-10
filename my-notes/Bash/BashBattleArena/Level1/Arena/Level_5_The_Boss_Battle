@@ -1,0 +1,18 @@
+#!/bin/bash
+
+mkdir -p Battlefield
+touch Battlefield/knight.txt Battlefield/sorcerer.txt Battlefield/rogue.txt
+
+if [ -f Battlefield/knight.txt ]; then
+    echo "Knight exists"
+    mkdir -p Archive
+    mv Battlefield/knight.txt Archive
+    echo "Knight has been moved to Archive"
+else
+    echo "Knight doesn't exist"
+fi 
+
+echo "Battlefield Contents:"
+ls -la Battlefield
+echo "Archive Contents:"
+ls -la Archive

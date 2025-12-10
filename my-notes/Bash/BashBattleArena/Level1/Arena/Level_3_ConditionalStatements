@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+if [ -f "Hero.txt" ]; then
+  echo "Hero found!"
+else
+ echo "Hero doesn't exist!"
+fi
+
